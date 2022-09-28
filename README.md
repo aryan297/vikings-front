@@ -1,4 +1,7 @@
-# OneKgate
+# Challenge
+ Part 1 Contains Forms that used Frontend Memory
+ 
+ Part 2 Contains Server Side using JSON Server for API hits
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0-rc.0.
 
