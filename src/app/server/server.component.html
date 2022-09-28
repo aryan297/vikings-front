@@ -1,0 +1,13 @@
+<h2>Server Data from that Form ...</h2>
+
+<div  *ngFor="let data of property;index as i">
+    <mat-card style="border: 2px solid; gap:1rem; width: 500px; margin: 10px;" > 
+    <h3> Name :<b>{{data.name}}</b></h3>
+    <h3> Description:<b>{{data.description}}</b></h3>
+    <h3>Size:<b>{{data.size}}</b></h3>
+    <button mat-raised-button (click)=remove(data.id,i) color="warn"> delete
+
+    </button>
+    </mat-card>
+ 
+</div>

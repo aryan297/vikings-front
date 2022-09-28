@@ -1,0 +1,55 @@
+
+<div class="main">
+
+    <h2>Part1 ,Data should vanished after refresh</h2>
+    <form [formGroup]="Form">
+<div class="row">
+    <label>Name </label>
+    <mat-form-field appearance="outline">
+        <input matInput type="text" formControlName="name">
+
+    </mat-form-field>
+  
+        <label> Description </label>
+        <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="description">
+    
+        </mat-form-field>
+
+</div>
+
+<div>
+    <label>Size</label>
+<mat-form-field  appearance="outline">
+<input matInput type="number" formControlName="size">
+
+</mat-form-field>
+</div>
+
+
+<button (click)="save()"  mat-raised-button color="accent" style="margin-right:10px">
+    Save
+
+</button>
+<button routerLink="/" mat-stroked-button color="warn"> Back to Main page
+
+</button>
+
+</form>
+
+<div class="row">
+
+<div  *ngFor="let data of property;index as i">
+    <mat-card style="border: 2px solid; gap:1rem; width: 500px; margin: 10px;" > 
+    <h3> Name :<b>{{data.name}}</b></h3>
+    <h3> Description:<b>{{data.description}}</b></h3>
+    <h3>Size:<b>{{data.size}}</b></h3>
+    <button mat-raised-button (click)=remove(i) color="warn"> delete
+
+    </button>
+    </mat-card>
+ 
+</div>
+
+</div>
+</div>
